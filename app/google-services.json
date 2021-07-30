@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "792245261688",
+    "firebase_url": "https://fir-test-57a01.firebaseio.com",
+    "project_id": "fir-test-57a01",
+    "storage_bucket": "fir-test-57a01.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:792245261688:android:d240dc70bb9cd8e9f2a48d",
+        "android_client_info": {
+          "package_name": "com.example.myfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "792245261688-trtne91s8e1qir1jm0tilgm6vnjntfjb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLmZ7Nj0m_Mjuupsv4D8BR1rBWNub-PkE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "792245261688-trtne91s8e1qir1jm0tilgm6vnjntfjb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:792245261688:android:79ebe6793e376465f2a48d",
+        "android_client_info": {
+          "package_name": "com.funapps.rickandmortyapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "792245261688-trtne91s8e1qir1jm0tilgm6vnjntfjb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLmZ7Nj0m_Mjuupsv4D8BR1rBWNub-PkE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "792245261688-trtne91s8e1qir1jm0tilgm6vnjntfjb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:792245261688:android:5ab4c3919f613065f2a48d",
+        "android_client_info": {
+          "package_name": "com.funapps.spainiptv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "792245261688-trtne91s8e1qir1jm0tilgm6vnjntfjb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLmZ7Nj0m_Mjuupsv4D8BR1rBWNub-PkE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "792245261688-trtne91s8e1qir1jm0tilgm6vnjntfjb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

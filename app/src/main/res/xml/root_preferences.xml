@@ -1,0 +1,31 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory app:title="@string/messages_header">
+
+        <SwitchPreference
+            app:key="notification"
+            app:title="@string/settings_notification"
+            app:defaultValue="true"
+            app:summary="@string/settings_notification_summary"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/settings_personalization">
+        <!--ListPreference
+            app:defaultValue="0"
+            app:entries="@array/theme_modes_values"
+            app:entryValues="@array/theme_modes_entries"
+            app:key="theme_mode"
+            app:title="@string/settings_theme"
+            app:useSimpleSummaryProvider="true" /-->
+
+        <ListPreference
+            app:defaultValue="list"
+            app:entries="@array/view_channels_entries"
+            app:entryValues="@array/view_channels_values"
+            app:key="viewChannel"
+            app:title="@string/channe_view"
+            app:useSimpleSummaryProvider="true"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>

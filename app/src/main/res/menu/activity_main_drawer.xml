@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group
+        android:id="@+id/nav_tv"
+        android:checkableBehavior="single">
+        <item android:title="@string/title_tv">
+            <menu>
+                <item
+                    android:id="@+id/nav_spain_home"
+                    android:icon="@drawable/ic_live_tv"
+                    android:title="@string/menu_spain" />
+                <item
+                    android:id="@+id/nav_international"
+                    android:icon="@drawable/ic_live_tv"
+                    android:title="@string/menu_international" />
+            </menu>
+        </item>
+
+    </group>
+
+    <!--group
+        android:id="@+id/nav_radio"
+        android:checkableBehavior="single">
+        <item android:title="@string/title_radio">
+            <menu>
+                <item
+                    android:id="@+id/nav_spain_radio"
+                    android:icon="@drawable/ic_radio"
+                    android:title="@string/menu_spain" />
+                <item
+                    android:id="@+id/nav_international_radio"
+                    android:icon="@drawable/ic_radio"
+                    android:title="@string/menu_international" />
+            </menu>
+        </item>
+
+    </group-->
+
+</menu>

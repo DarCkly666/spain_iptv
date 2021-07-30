@@ -1,0 +1,68 @@
+<resources>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">@string/app_name</string>
+    <string name="nav_header_subtitle">Enjoy live TDT and Radios</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="channel_image">Channel image</string>
+    <string name="menu_spain">Spain</string>
+    <string name="menu_international">International</string>
+    <string name="icon_tv">Icon tv</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <string name="info">Info</string>
+    <string name="privacy_policies">Privacy policies</string>
+    <string name="about">About</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
+    <!--Settings-->
+    <string name="settings_notification">Notifications</string>
+    <string name="settings_notification_summary">Turn off to stop receive notifications</string>
+
+    <string name="settings_personalization">Personalization</string>
+    <string name="settings_theme">Theme</string>
+    <string name="theme_auto">Auto</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    <string name="item_grid">Grid</string>
+    <string name="item_list">List</string>
+    <string name="channe_view">Show as</string>
+    <string name="title_radio">Radio</string>
+    <string name="title_tv">TV</string>
+
+    <string name="no_connection">No Internet connection</string>
+    <string name="no_source">No source</string>
+    <string name="loading">Loading…</string>
+
+    <string name="play_services">Google Play Services</string>
+    <string name="play_services_message">This App needs Google Play Services to work properly</string>
+    <string name="play_services_ok">OK</string>
+
+    <string name="default_notification_channel_id" translatable="false">1001</string>
+    <!--string name="idapp" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="idbanner" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="idinterstitial" translatable="false">ca-app-pub-3940256099942544/1033173712</string-->
+    <string name="app_name" translatable="false">España TDT &amp; Radio</string>
+    <string name="idapp" translatable="false">ca-app-pub-5837385019758024~8438913281</string>
+    <string name="idbanner" translatable="false">ca-app-pub-5837385019758024/3186586600</string>
+    <string name="idinterstitial" translatable="false">ca-app-pub-5837385019758024/4045013332</string>
+</resources>
