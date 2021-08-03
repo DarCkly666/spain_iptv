@@ -16,7 +16,7 @@
     <!--DarkMode-->
     <color name="color_primary_mode_dark">#B71C1C</color>
 
-    <color name="color_loading">#976d9e</color>
+    <color name="color_loading">#191f26</color>
 
     <color name="color_played">#B71C1C</color>
     <color name="color_not_played">#9AB71C1C</color>

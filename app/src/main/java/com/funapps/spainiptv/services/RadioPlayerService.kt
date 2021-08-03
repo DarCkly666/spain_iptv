@@ -104,7 +104,7 @@ class RadioPlayerService: Service(), Player.EventListener {
             Log.e("ERROR", e.message.toString())
             image = BitmapFactory.decodeResource(
                 applicationContext.resources,
-                R.drawable.notification_icon
+                R.mipmap.ic_launcher
             )
             Log.d("IMAGEGET-CATCH", image.toString())
         }finally {
@@ -124,7 +124,7 @@ class RadioPlayerService: Service(), Player.EventListener {
 
         val icon = BitmapFactory.decodeResource(
             applicationContext.resources,
-            R.drawable.notification_icon
+            R.mipmap.ic_launcher
         )
 
         createNotificationChannel(channelId)

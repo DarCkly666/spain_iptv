@@ -1,4 +1,5 @@
 <resources>
+    <string name="app_name" translatable="false">España TDT &amp; Radio</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">@string/app_name</string>
@@ -58,10 +59,11 @@
     <string name="play_services_ok">OK</string>
 
     <string name="default_notification_channel_id" translatable="false">1001</string>
+
     <!--string name="idapp" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
     <string name="idbanner" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
     <string name="idinterstitial" translatable="false">ca-app-pub-3940256099942544/1033173712</string-->
-    <string name="app_name" translatable="false">España TDT &amp; Radio</string>
+
     <string name="idapp" translatable="false">ca-app-pub-5837385019758024~8438913281</string>
     <string name="idbanner" translatable="false">ca-app-pub-5837385019758024/3186586600</string>
     <string name="idinterstitial" translatable="false">ca-app-pub-5837385019758024/4045013332</string>

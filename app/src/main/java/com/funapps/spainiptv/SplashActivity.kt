@@ -22,6 +22,12 @@ import com.funapps.spainiptv.services.RadioPlayerService
 import com.funapps.spainiptv.util.Constants
 import com.google.android.gms.common.ConnectionResult
 import com.google.android.gms.common.GoogleApiAvailability
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.ValueEventListener
+import com.google.firebase.database.ktx.database
+import com.google.firebase.database.ktx.getValue
+import com.google.firebase.ktx.Firebase
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 
@@ -33,12 +39,10 @@ class SplashActivity : AppCompatActivity() {
 
         loadLoading()
 
-        Log.d("PLAYSERVICES", isGooglePlayServicesAvailable(this).toString())
-
         val connection: CheckConnectivity = CheckConnectivity(this)
         if (connection.isConnected()) {
             if (isGooglePlayServicesAvailable(this)){
-                getResponse(Constants.URL)
+                getConfigs()
             }
         }else{
             Toast.makeText(this, getString(R.string.no_connection), Toast.LENGTH_LONG).show()
@@ -48,7 +52,44 @@ class SplashActivity : AppCompatActivity() {
 
     private fun loadLoading(){
         val imageLoading: ImageView = findViewById(R.id.splash_loading)
-        Glide.with(this).asGif().load(R.drawable.loadingcat).into(imageLoading)
+        Glide.with(this).asGif().load(R.drawable.gif).into(imageLoading)
+    }
+
+    private fun getConfigs(){
+        val database = Firebase.database
+        val reference = database.getReference("configs")
+        var developmentStatus: Int = 0
+        val prefs: SharedPrefs = SharedPrefs(this)
+        reference.addListenerForSingleValueEvent(object : ValueEventListener{
+            override fun onDataChange(snapshot: DataSnapshot) {
+                val develop = snapshot.child("development").value
+                val url: String = snapshot.child("infoweb").value as String
+                val responseURL = snapshot.child("tvURL").value as String
+                prefs.saveURL(url)
+                try {
+                    developmentStatus = Integer.parseInt(develop.toString())
+                }catch (e: Exception){
+                    e.printStackTrace()
+                }
+                /*Log.d("CONFIGFIRE", "Dev: $developmentStatus")
+                Log.d("CONFIGFIRE", "URL: $url")
+                Log.d("CONFIGFIRE", "Response URL: $responseURL")*/
+                if (developmentStatus == 1){
+                    startInfoActivity()
+                }else{
+                    val myUrl: String = if(responseURL.isNotEmpty()) responseURL else Constants.URL
+                    getResponse(myUrl)
+                }
+            }
+            override fun onCancelled(error: DatabaseError) {
+                Log.e("FIREBASE", error.details)
+            }
+        })
+    }
+
+    private fun startInfoActivity(){
+        startActivity(Intent(this, InfoActivity::class.java))
+        finish()
     }
 
     private fun getResponse(url: String){
@@ -59,9 +100,9 @@ class SplashActivity : AppCompatActivity() {
                 val gson: Gson = Gson()
                 val responseTV = gson.fromJson(response.toString(), TVResponse::class.java)
                 shared.saveShared(responseTV)
-                /*startActivity(Intent(this, MainActivity::class.java))
-                finish()*/
-                getResponseRadios(Constants.URLRADIO)
+                startActivity(Intent(this, MainActivity::class.java))
+                finish()
+                //getResponseRadios(Constants.URLRADIO)
             },
             {
                 Log.d("VOLLEY", it.message.toString())

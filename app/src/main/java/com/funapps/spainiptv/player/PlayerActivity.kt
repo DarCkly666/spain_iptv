@@ -28,6 +28,7 @@ class PlayerActivity : AppCompatActivity() {
     private lateinit var playerView: PlayerView
 
     private lateinit var status: TextView
+    private lateinit var backButton: ImageView
 
     private var playWhenReady = true
     private var currentWindow = 0
@@ -60,11 +61,15 @@ class PlayerActivity : AppCompatActivity() {
         playerView = findViewById(R.id.video_view)
         channelName = findViewById(R.id.player_channel_name)
         channelImage = findViewById(R.id.player_channel_image)
+        backButton = findViewById(R.id.player_back_button)
     }
 
     private fun loadData(){
         channelName.text = name
         Glide.with(this).load(image).placeholder(R.drawable.ic_live_tv).error(R.mipmap.ic_launcher_foreground).into(channelImage)
+        backButton.setOnClickListener {
+            onBackPressed()
+        }
     }
 
     @SuppressLint("UseCompatLoadingForDrawables")

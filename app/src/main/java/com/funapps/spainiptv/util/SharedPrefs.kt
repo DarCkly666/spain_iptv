@@ -38,4 +38,16 @@ class SharedPrefs (private val mContext: Context) {
         val json = shared.getString("RESPONSERADIO", "")
         return gson.fromJson(json, TVResponse::class.java)
     }
+
+    fun saveURL(url: String){
+        val shared: SharedPreferences = mContext.getSharedPreferences("CONFIG", MODE_PRIVATE)
+        val editor = shared.edit()
+        editor.putString("CONFIG", url)
+        editor.apply()
+    }
+
+    fun getURL(): String {
+        val shared: SharedPreferences = mContext.getSharedPreferences("CONFIG", MODE_PRIVATE)
+        return shared.getString("CONFIG", "") as String
+    }
 }
